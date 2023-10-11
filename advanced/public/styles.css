@@ -29,7 +29,12 @@ body {
   border-radius: 4px;
   border: 0;
   font-weight: 600;
+}
+
+button.contrast {
   cursor: pointer;
+  background: #4c48ef;
+  color: #fff;
 }
 /* End of styles for home page */
 

@@ -16,9 +16,52 @@
 
         <!-- Button to trigger the modal -->
         <div>
-          <button class="contrast" onclick="openFlatfile()">
-            Open existing Space
+          <br />
+          Enter a sample userId.<br />
+          <input
+            id="userIdInput"
+            class="contrast"
+            type="text"
+            value="user1@examples.com"
+          />
+          <button
+            class="contrast"
+            onclick="openFlatfile(
+              {
+                publishableKey: 'pk_3dd6ee8679994ee5b421f17b91524fee',
+                environmentId: 'us_env_QzZ1nMYH'
+              }
+            )"
+          >
+            Create or Open existing Space depending on user
           </button>
+          <br />
+          <br />
+          <em
+            ><small
+              >If the userId is found and it is already associated to a Space,
+              it will open that Space. <br />If no spaceId, it will create a new
+              Space. TODO: Once space is made for user, tie it back to
+              them.</small
+            ></em
+          >
+          <br /><br /><br />
+          <code
+            ><small>
+              const usersTable = {
+              <br />
+              "user1@example.com": { userId: "user1@example.com", spaceId:
+              "us_sp_yRuaABM5", companyId: "company1", },
+              <br />
+              "user2@example.com": { userId: "user2@example.com", spaceId: null,
+              companyId: "company2", },
+              <br />
+              "user3@example.com": { userId: "user3@example.com", spaceId: null,
+              companyId: "company3", },
+              <br />
+              };
+            </small></code
+          >
         </div>
       </div>
       <div id="flatfile_iFrameContainer"></div>
